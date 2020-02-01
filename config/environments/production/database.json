@@ -4,7 +4,12 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "uri": "${process.env.MONGO_URI}"
+        "database": "salty",
+        "host": "ds215219.mlab.com",
+        "srv": false,
+        "port": 15219,
+        "username": "admin",
+        "password": "OXmVfG8IsbKhcmri"
       },
       "options": {
         "ssl": true,
