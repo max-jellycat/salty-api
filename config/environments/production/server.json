@@ -1,0 +1,10 @@
+{
+  "host": "saltandpaper.net",
+  "port": 1337,
+  "autoReload": {
+    "enabled": false
+  },
+  "admin": {
+    "path": "/dashboard"
+  }
+}
