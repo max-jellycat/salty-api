@@ -4,15 +4,10 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "salty",
-        "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "uri": "${process.env.MONGO_URI}"
       },
       "options": {
-        "authenticationDatabase": ""
+        "ssl": true
       }
     }
   }

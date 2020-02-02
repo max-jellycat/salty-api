@@ -2,17 +2,13 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "bookshelf",
+      "connector": "mongoose",
       "settings": {
-        "client": "postgres",
-        "host": "${process.env.DATABASE_HOST}",
-        "port": "${process.env.DATABASE_PORT}",
-        "database": "${process.env.DATABASE_NAME}",
-        "username": "${process.env.DATABASE_USERNAME}",
-        "password": "${process.env.DATABASE_PASSWORD}",
-        "ssl": true
+        "uri": "mongodb://admin:OXmVfG8IsbKhcmri@salty-shard-00-00-0ch63.mongodb.net:27017,salty-shard-00-01-0ch63.mongodb.net:27017,salty-shard-00-02-0ch63.mongodb.net:27017/test?ssl=true&replicaSet=salty-shard-0&authSource=admin&retryWrites=true&w=majority"
       },
-      "options": {}
+      "options": {
+        "ssl": true
+      }
     }
   }
 }
