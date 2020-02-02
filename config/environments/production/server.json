@@ -1,6 +1,5 @@
 {
   "host": "obscure-headland-27287.herokuapp.com",
-  "port": 1337,
   "autoReload": {
     "enabled": false
   }
