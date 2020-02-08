@@ -1,6 +1,6 @@
 'use strict';
 const axios = require('axios')
-
+const slugify = require('slugify')
 /**
  * Lifecycle callbacks for the `article` model.
  */
@@ -8,7 +8,11 @@ const axios = require('axios')
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
-  // beforeSave: async (model, attrs, options) => {},
+  beforeSave: async model => {
+    if (model.title) {
+      model.slug = slugify(model.title.toLowerCase());
+    }
+  },
 
   // After saving a value.
   // Fired after an `insert` or `update` query.
@@ -46,7 +50,13 @@ module.exports = {
 
   // Before updating a value.
   // Fired before an `update` query.
-  // beforeUpdate: async (model, attrs, options) => {},
+  beforeUpdate: async model => {
+    if (model.getUpdate() && model.getUpdate().title) {
+      model.update({
+        slug: slugify(model.getUpdate().title.toLowerCase()),
+      });
+    }
+  },
 
   // After updating a value.
   // Fired after an `update` query.
