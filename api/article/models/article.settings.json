@@ -31,6 +31,11 @@
     "category": {
       "model": "category",
       "via": "articles"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "articles"
     }
   }
 }
