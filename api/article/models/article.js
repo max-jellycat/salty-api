@@ -49,7 +49,7 @@ module.exports = {
 
   // After updating a value.
   // Fired after an `update` query.
-  afterCreate: async entry => {
+  afterUpdate: async entry => {
     try {
       await fetch(strapi.config.currentEnvironment.staticWebsiteBuildURL, { method: 'post' })
     } catch(err) {
@@ -63,7 +63,7 @@ module.exports = {
 
   // After destroying a value.
   // Fired after a `delete` query.
-  afterCreate: async entry => {
+  afterDestroy: async entry => {
     try {
       await fetch(strapi.config.currentEnvironment.staticWebsiteBuildURL, { method: 'post' })
     } catch(err) {
