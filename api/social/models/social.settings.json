@@ -1,8 +1,6 @@
 {
-  "connection": "default",
-  "collectionName": "categories",
   "info": {
-    "name": "Category"
+    "name": "Social"
   },
   "options": {
     "increments": true,
@@ -13,16 +11,15 @@
       "type": "string",
       "required": true
     },
-    "articles": {
-      "via": "category",
-      "collection": "article"
-    },
-    "slug": {
-      "type": "string"
+    "link": {
+      "type": "string",
+      "required": true
     },
     "icon": {
       "type": "string",
       "required": true
     }
-  }
+  },
+  "connection": "default",
+  "collectionName": "socials"
 }

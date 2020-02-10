@@ -29,8 +29,8 @@
       "required": true
     },
     "category": {
-      "via": "articles",
-      "model": "category"
+      "model": "category",
+      "via": "articles"
     },
     "user": {
       "plugin": "users-permissions",
@@ -39,6 +39,10 @@
     },
     "slug": {
       "type": "string"
+    },
+    "Subtitle": {
+      "type": "text",
+      "required": true
     }
   }
 }
